@@ -10,5 +10,5 @@ import java.util.List;
 public class ReserveOrderResponse {
 
     String code;
-    List<DataInfo> dataList;
+    DataInfo data;
 }

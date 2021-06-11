@@ -1,6 +1,7 @@
 package com.supr.daily.controller;
 
 import com.supr.daily.constants.UsefulConstants;
+import com.supr.daily.exception.OrderReservationException;
 import com.supr.daily.model.OrderRequest;
 import com.supr.daily.response.CanFullfillResponse;
 import com.supr.daily.response.DataInfo;
@@ -45,14 +46,15 @@ public class ItemController {
             DataInfo dataInfo = new DataInfo();
             dataInfo.setReserved(true);
             dataInfo.setMessage(UsefulConstants.RESERVE_SUCCESS);
+            response.setData(dataInfo);
             return ResponseEntity.ok().body(response);
 
-
-        }catch (Exception e){
+        }catch (OrderReservationException e){
 
             DataInfo dataInfo = new DataInfo();
             dataInfo.setReserved(false);
             dataInfo.setMessage(UsefulConstants.RESERVE_FAILED);
+            response.setData(dataInfo);
             return ResponseEntity.ok().body(response);
 
         }
