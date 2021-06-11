@@ -27,6 +27,10 @@ Category "F_N_V":</br>
 Combined orders for a date should not be more than 150 units</br>
 We can fulfil the order only if all the criteria are met.</br>
 
+**Note: For implementing each criterion, please assume all relevant data/configs to be
+present and define relevant data structures for them. The data can
+be assumed to be static**
+
 ### - API 1: Check If We can Fulfil An Order
 
 Input:
