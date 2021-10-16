@@ -1,4 +1,4 @@
-# GroceryDaily-SuprDaily
+# GroceryDaily
 
 ## Description
 Design & Build APIs that provide the capability to check and reserve orders that
